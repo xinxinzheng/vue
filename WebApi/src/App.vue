@@ -1,10 +1,10 @@
 <template>
   <div id="myApp">
-  	<header>前端API</header>
-  	<div>
-  		<div>left</div>
-  		<div>right</div>
+  	<header class="header">前端API</header>
+  	<div class="body">
+  		<div class="left-sidebar">left</div>
+  		<div class="right-content">right</div>
   	</div>
-  	<footer>底部</footer>
+  	<footer class="footer">底部</footer>
   </div>
 </template>
