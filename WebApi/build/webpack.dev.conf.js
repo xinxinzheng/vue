@@ -5,7 +5,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-var ExtractPlugin = require('extract-text-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -18,7 +18,7 @@ module.exports = merge(baseWebpackConfig, {
       // 配置sass编译规则
       {
         test:/\.scss$/,
-        loader:ExtractPlugin.extract({fallback:'style-loader', use:'css-loader!sass-loader'})
+        loader:ExtractTextPlugin.extract({fallback:'css-loader', use:['sass-loader']})
       }
     ]
   },
@@ -37,6 +37,7 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    new FriendlyErrorsPlugin()
+    new FriendlyErrorsPlugin(),
+    new ExtractTextPlugin('style.css')
   ]
 })
