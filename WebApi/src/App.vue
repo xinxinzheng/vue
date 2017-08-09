@@ -1,13 +1,6 @@
 <template>
   <div id="myApp">
-  	<header class="header flex-row">
-  		<div class="flex3"></div>
-  		<ul class="header-nav flex7">
-  			<li><a>基础知识</a></li>
-  			<li><a>框架</a></li>
-  			<li><a>工具</a></li>
-  		</ul>
-  	</header>
+  	<header-temp></header-temp>
   	<div class="content flex-row">
   		<div class="left-sidebar flex2">
   			<ul>
@@ -19,3 +12,12 @@
   	<footer class="footer">底部</footer>
   </div>
 </template>
+<script>
+  import headerTemp from './components/HeaderNav'
+  export default {
+    name: 'myApp',
+    components: {
+      headerTemp
+    }
+  }
+</script>
