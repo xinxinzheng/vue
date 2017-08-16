@@ -1,0 +1,11 @@
+@charset "UTF-8";
+li{
+	list-style:none;
+}
+a{
+	cursor:pointer;
+	text-decoration:none;
+}
+a:hover , a:active , a:visited , a:focus{
+	text-decoration:none;
+}

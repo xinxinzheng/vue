@@ -5,7 +5,7 @@ $footer-height:50px;
 $header-font-color:#ededed;
 *{
 	font-size:$fontSize;
-	font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;
+	font-family:'Apple Lihei','Microsoft Yahei','Avenir', Helvetica, Arial, sans-serif;
 }
 .flex-row{
 	display:flex;
@@ -42,28 +42,87 @@ $header-font-color:#ededed;
 .flex9{
 	flex:9;
 }
-li{
-	list-style:none;
-}
-header.header{
+.header{
 	height:$header-height;
 	width:100%;
 	background:#333333 none repeat center top;
-	ul.header-nav{
-		li{
-			display: inline-block;
-			padding:0px 15px;
-			a{
-				color:$header-font-color;
+	position:relative;
+	header{
+		height:100%;
+		.logo{
+			height:100%;
+			.logo-icon{
+				flex-basis: 80px;
+				height:100%;
+				background:url("../assets/img/logo.jpg") no-repeat ;
+				background-size:40px 40px;
+				background-position:20px center;
+			}
+			.logo-msg{
 				font-size:16px;
+				color:$header-font-color;
+				line-height:$header-height;
+			}
+		}
+		ul.header-nav{
+			height:100%;
+			>li{
+				display: inline-block;
+				padding:0px 25px;
+				height:100%;
+				position:relative;
+				line-height:$header-height;
+				a{
+					color:$header-font-color;
+					font-size:16px;
+				}
+				& :hover{
+					color:#00c1de;
+					transition:color 200ms;
+				}
+				& :hover +.line{
+					width:50px;
+				}
+				.header-nav-dropdown{
+					position:absolute;
+					width:150px;
+					background:#272b2e;
+					color:white;
+					z-index:998;
+					display: none;
+					top:50px;
+					left:0px;
+					ul.header-nav-dropdown-container{
+						padding:0px;
+						li{
+							display: block;
+							height:40px;
+							line-height:40px;
+							a{
+								width:100%;
+								padding:0px 10px;
+								display: inline-block;
+								& :hover{
+									color:#00c1de;
+									transition:color 200ms;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 }
-footer.footer{
-	height:$footer-height;
-	width:100%;
-}
 div.content{
 
+}
+.line{
+	position: absolute;
+    width: 0;
+    height: 3px;
+    left: 115px;
+    bottom: 0;
+    background: #00c1de;
+    transition: width .3s cubic-bezier(.4,0,.2,1) , left .3s cubic-bezier(.4,0,.2,1);
 }
