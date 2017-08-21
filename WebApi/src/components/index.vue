@@ -4,11 +4,11 @@
       <el-row>
 		<el-card :body-style="{ padding: '0px' }">
 		    <img src="../assets/img/angular.jpg" class="image">
-		    <div style="padding: 14px;">
-		        <span>好吃的汉堡</span>
+		    <div style="padding: 5px 15px;">
+		        <span>AngularJS诞生于2009年，由Misko Hevery 等人创建，后为Google所收购。是一款优秀的前端JS框架，已经被用于Google的多款产品当中。AngularJS有着诸多特性，最为核心的是：MVC、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。</span>
 		        <div class="bottom clearfix">
-		          <time class="time">{{ 4 }}</time>
-		          <el-button type="text" class="button">操作按钮</el-button>
+		          <time class="time">2017-08-21 15:05</time>
+		          <el-button type="text" class="button">快速开始</el-button>
 		        </div>
 		    </div>
 		</el-card>
