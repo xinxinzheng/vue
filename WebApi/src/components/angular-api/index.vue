@@ -8,7 +8,7 @@
 </template>
 <script>
 	import Vue from 'vue'
-	import sideBar from '../sidebar'
+	import sideBar from '../common/sidebar'
 	export default{
 		data(){
 			return {

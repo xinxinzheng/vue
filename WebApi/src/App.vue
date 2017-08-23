@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-  import headerTemp from './components/HeaderNav'
-  import bodyTemp from './components/body'
+  import headerTemp from './components/common/HeaderNav'
+  import bodyTemp from './components/common/body'
   export default {
     name: 'myApp',
     components: {
