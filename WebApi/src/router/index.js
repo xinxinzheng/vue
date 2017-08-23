@@ -15,6 +15,10 @@ export default new Router({
     {
         path: '/index',
         component: resolve => require(['../components/index.vue'], resolve)
+    },
+    {
+        path: '/angular-api',
+        component: resolve => require(['../components/angular-api/index.vue'], resolve)
     }
   ]
 })
