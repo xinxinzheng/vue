@@ -1,14 +1,15 @@
 <template>
 	<div class="flex-row flex1">
-		<side-bar class="flex2" :navData='sidebarData'></side-bar>
-		<div class="flex8">
-			<router-view ></router-view>
+		<side-bar :navData='sidebarData'></side-bar>
+		<div>
+			<content></content>
 		</div>
 	</div>
 </template>
 <script>
 	import Vue from 'vue'
 	import sideBar from '../common/sidebar'
+	import content from './content'
 	export default{
 		data(){
 			return {
@@ -17,6 +18,7 @@
 		},
 		components:{
 			sideBar,
+			content
 		}
 
 	}

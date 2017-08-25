@@ -1,5 +1,5 @@
 <template>
-	 <el-col :span="8">
+	 <el-col :span="4">
     <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="dark">
       <el-submenu :index="item.title" v-for="item in navData">
         <template slot="title">{{item.title}}</template>
